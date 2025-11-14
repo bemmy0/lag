@@ -7,7 +7,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: #c0c0c0; /* cinza clássico 98 */
+            background: #c0c0c0; /* fundo Windows 98 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,8 +18,8 @@
 
         /* Caixinha 3D estilo Windows 98 */
         #checkbox {
-            width: 40px;
-            height: 40px;
+            min-width: 80px;
+            padding: 10px;
             background: #c0c0c0;
             border: 2px solid #fff;
             border-right-color: #404040;
@@ -27,12 +27,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        #dot {
-            width: 14px;
-            height: 14px;
-            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
         }
 
         #video {
@@ -45,9 +42,7 @@
 </head>
 <body onclick="start()">
 
-    <div id="checkbox">
-        <div id="dot"></div>
-    </div>
+    <div id="checkbox">lagado</div>
 
     <video id="video" src="video.mp4" loop></video>
 
