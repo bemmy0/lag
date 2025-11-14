@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Screamer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            cursor: pointer;
+        }
+
+        #box {
+            width: 60px;
+            height: 60px;
+            border: 4px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #dot {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        #video {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body onclick="start()">
+
+    <div id="box">
+        <div id="dot"></div>
+    </div>
+
+    <video id="video" src="video.mp4" loop></video>
+
+    <script>
+        function start() {
+            document.body.onclick = null;
+
+            document.getElementById('box').style.display = 'none';
+
+            const v = document.getElementById('video');
+            v.style.display = 'block';
+            v.play();
+        }
+    </script>
+
+</body>
+</html>
